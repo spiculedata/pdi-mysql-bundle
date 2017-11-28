@@ -1,0 +1,18 @@
+﻿series: xenial
+applications:
+  pentaho-data-integration:
+    charm: 'cs:~spiculecharms/pentaho-data-integration-45'
+    num_units: 1
+    annotations:
+      gui-x: 421
+      gui-y: 62
+  mysql:
+    charm: 'cs:mysql-58'
+    num_units: 1
+    annotations:
+      gui-x: 430
+      gui-y: 403
+relations:
+  - - 'mysql:db'
+    - 'pentaho-data-integration:mysql'
+machines: {}
